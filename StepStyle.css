@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("https://images.pexels.com/photos/1037992/pexels-photo-1037992.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#regForm {
+  background-color: #219ebc55;
+  margin: 100px auto;
+  font-family: Raleway;
+  padding: 40px;
+  width: 70%;
+  min-width: 300px;
+  border-radius: 20px;
+}
+
+h1 {
+  color: #023047;
+  text-align: center;
+}
+
+input {
+  padding: 10px;
+  width: 100%;
+  font-size: 17px;
+  font-family: Raleway;
+  border: 1px solid #023047;
+  border-radius: 7px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  background-color: #219ebc55;
+}
+input::placeholder {
+  color: #023047;
+}
+/* Mark input boxes that gets an error on validation: */
+input.invalid {
+  background-color: #fb8500;
+}
+
+/* Hide all steps by default: */
+.tab {
+  display: none;
+}
+
+/* button {
+  background-color: #023047;
+  color: #8ecae6;
+  border: none;
+  padding: 10px 20px;
+  font-size: 17px;
+  font-family: Raleway;
+  cursor: pointer;
+  border-radius: 10px;
+} */
+button {
+  display: inline-block;
+  padding: 0.75rem 2.5rem;
+  border-radius: 10rem;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 0.15rem;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  border: 1px solid #fff;
+}
+button:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #8ecae6;
+  border-radius: 10rem;
+  z-index: -2;
+}
+button:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #219ebc;
+  transition: all 0.3s;
+  border-radius: 10rem;
+  z-index: -1;
+}
+button:hover {
+  color: #fff;
+}
+button:hover:before {
+  width: 100%;
+}
+
+#prevBtn {
+  background-color: #ffb703;
+}
+
+/* Make circles that indicate the steps of the form: */
+.step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #023047;
+  border: none;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+.step.active {
+  opacity: 1;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+  background-color: #023047;
+}
+span {
+  color: #023047;
+  font-size: 24px;
+  font-weight: 900;
+}
